@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "599372407179",
+    "project_id": "my-labor-app-project",
+    "storage_bucket": "my-labor-app-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:599372407179:android:9ec119eefd266e17b78f8e",
+        "android_client_info": {
+          "package_name": "com.example.labor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "599372407179-4sfo6b5q4ilgp28gosua34udeuij5kct.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.labor",
+            "certificate_hash": "3039ce695bc472b35114c30a6e167e9090156dc5"
+          }
+        },
+        {
+          "client_id": "599372407179-mll3v676lt75lveu56up5pn2rn8orn1d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClY5IDuqolbQ122AZ1ED90PPdJuKI3Mpc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "599372407179-mll3v676lt75lveu56up5pn2rn8orn1d.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "599372407179-49l98aud75h2ddf6n1unfd0v6eu28be7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.labor.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

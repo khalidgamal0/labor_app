@@ -81,7 +81,14 @@ class HomeScreenBody extends StatelessWidget {
               const SizedBox(
                 height: 28,
               ),
-              const Image(image: AssetImage(AssetsData.home_image)),
+              SizedBox(
+                  height: 140,
+                  child: ListView.separated(
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) =>  const Image(image: AssetImage(AssetsData.home_image,),fit: BoxFit.fill),
+                     separatorBuilder: (context, index) => const SizedBox(width: 10,),
+                    itemCount: 3,
+                  )),
               const SizedBox(
                 height: 28,
               ),
