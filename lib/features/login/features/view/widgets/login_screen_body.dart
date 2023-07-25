@@ -5,21 +5,19 @@ import 'login_sec_2.dart';
 class LoginScreenBody extends StatelessWidget {
    LoginScreenBody({Key? key}) : super(key: key);
 
-   var phoneController=TextEditingController();
-   var passController=TextEditingController();
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return const Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 14),
+          padding:  EdgeInsets.symmetric(horizontal: 20,vertical: 14),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                LoginSec1(phoneController: phoneController, passController: passController,isRegister: false,nameController:TextEditingController() ),
-                const SizedBox(height: 15,),
-                const LoginSec2(isRegister:false,)
+                LoginSec1(isRegister: false),
+                 SizedBox(height: 15,),
+                 LoginSec2(isRegister:false,)
               ],
             ),
           ),

@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:labor/constant.dart';
@@ -6,6 +7,7 @@ import 'package:otp_text_field/style.dart';
 import 'package:otp_text_field/otp_text_field.dart';
 import '../../../../../core/utils/text_style.dart';
 import '../../../../../core/widgets/custom_button.dart';
+import '../../../../login/features/manger/auth_cubit.dart';
 
 
 class OtpBody extends StatelessWidget {
@@ -13,6 +15,9 @@ class OtpBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    FirebaseAuth auth = FirebaseAuth.instance;
+    String smsCode = '';
+
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(onPressed: (){Navigator.of(context).pop();},
@@ -58,10 +63,20 @@ class OtpBody extends StatelessWidget {
               fieldStyle: FieldStyle.box,
               outlineBorderRadius: 8,
               textFieldAlignment: MainAxisAlignment.spaceBetween ,
+               onChanged: (value){
+                 smsCode=value;
+               },
+
             ),
             const SizedBox(height: 48,),
-            CustomButton(buttonName: 'Submit',onTap:(){
-              GoRouter.of(context).push(AppRouter.kRestPasswordScreen);
+            CustomButton(buttonName: 'Submit',onTap:()async{
+              // Create a PhoneAuthCredential with the code
+              PhoneAuthCredential credential = PhoneAuthProvider.credential(verificationId: AuthCubit.verificationId, smsCode: smsCode);
+
+              // Sign the user in (or link) with the credential
+              await auth.signInWithCredential(credential);
+              GoRouter.of(context).push(AppRouter.kLayoutScreen);
+
             },radius: 8,),
             const SizedBox(height: 32,),
             Row(

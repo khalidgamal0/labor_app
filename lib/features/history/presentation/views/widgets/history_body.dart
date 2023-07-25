@@ -6,8 +6,9 @@ import 'package:labor/features/history/presentation/manger/history_cubit.dart';
 import '../../../../../core/widgets/customAppbar.dart';
 
 class HistoryScreenBody extends StatelessWidget {
-  const HistoryScreenBody({Key? key}) : super(key: key);
+  const HistoryScreenBody({Key? key,  this.isProduct=false}) : super(key: key);
 
+  final bool isProduct;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -20,7 +21,7 @@ class HistoryScreenBody extends StatelessWidget {
             var cubit=HistoryCubit.get(context);
             return Scaffold(
                 appBar: customAppbar(context: context,title: 'History'),
-                body:cubit.historyBody[cubit.historyIndex]
+                body:isProduct?cubit.historyBody[2]:cubit.historyBody[cubit.historyIndex]
 
             );
           },

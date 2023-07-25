@@ -44,7 +44,7 @@ Widget defaultTextButton({
   String? hintText,
   String? prefixText,
    TextStyle? textStyle,
-   Color suffixIconColor=Colors.grey,
+   Color? suffixIconColor,
    int? maxLines,
   Widget? prefix,
   IconData? suffixIcon,
@@ -80,7 +80,7 @@ Widget defaultTextButton({
           hintText:hintText,
           hintStyle:Styles.textStyleHintForm,
           suffixIcon: suffixIcon != null
-              ? IconButton(onPressed: suffixPressed, icon: Icon(suffixIcon))
+              ? IconButton(onPressed: suffixPressed, icon: Icon(suffixIcon,color: suffixIconColor,))
               : null,
           border: const OutlineInputBorder(),
           // prefixIcon: Icon(prefixIcon)

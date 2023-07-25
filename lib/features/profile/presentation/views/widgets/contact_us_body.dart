@@ -20,7 +20,7 @@ class ContactUsScreenBody extends StatelessWidget {
             const SizedBox(height: 29,),
              ProfileApproachFields(text: 'Name',hintText: 'Enter Your Name',),
              ProfileApproachFields(text: 'Phone',hintText: 'Enter Your Phone',),
-             ProfileApproachFields(text: 'Massege',hintText: 'Enter Your Massege',maxLines: 10),
+             ProfileApproachFields(text: 'Message',hintText: 'Enter Your Message',maxLines: 10),
             CustomButton(buttonName: 'Send',onTap: (){},)
           ]),
         ),

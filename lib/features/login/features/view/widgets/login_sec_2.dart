@@ -5,7 +5,6 @@ import 'package:labor/core/utils/app_router.dart';
 import '../../../../../core/utils/assets_data.dart';
 import '../../../../../core/utils/text_style.dart';
 import '../../../../../core/widgets/custom-_sing_another.dart';
-import '../../../../../core/widgets/custom_button.dart';
 
 class LoginSec2 extends StatelessWidget {
   const LoginSec2({
@@ -17,11 +16,6 @@ final bool isRegister;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        CustomButton(buttonName:isRegister?'Register':'Login',radius: 8,onTap: (){
-          // GoRouter.of(context).push(AppRouter.kHomeScreen);
-          GoRouter.of(context).push(AppRouter.kLayoutScreen);
-
-        },),
         const SizedBox(height: 10,),
         const Center(child:   Text('OR',style: Styles.textStyleOr,)),
         const SizedBox(height: 8,),

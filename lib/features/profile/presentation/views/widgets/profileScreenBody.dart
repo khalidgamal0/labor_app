@@ -6,10 +6,12 @@ import 'package:labor/core/widgets/customAppbar.dart';
 import 'package:labor/features/profile/presentation/views/widgets/profileFields.dart';
 import '../../../../../core/widgets/navigation.dart';
 import '../../../../../core/widgets/secon-custom_button.dart';
-import '../../../../notification/presentation/view/widgets/notification_screen.dart';
+import '../../../../adress/presentation/view/address_screen.dart';
+import '../../../../notification/presentation/view/notification_screen.dart';
 import '../../../../payment/presentation/views/payment_screen.dart';
 import '../contact_us.dart';
 import '../edit_profile.dart';
+import '../wallet.dart';
 
 class ProfileScreenBody extends StatelessWidget {
   const ProfileScreenBody({Key? key}) : super(key: key);
@@ -61,6 +63,7 @@ class ProfileScreenBody extends StatelessWidget {
                 title: 'Location',
                 text: 'Add your Home Location ',
                 onTap: () {
+                  navigateTo(context,const AddressScreen());
                 }),
             const SizedBox(
               height: 28,
@@ -82,13 +85,23 @@ class ProfileScreenBody extends StatelessWidget {
             const SizedBox(
               height: 28,
             ),
-            ProfileFields(
-                icon1: Icons.phone_in_talk,
-                title: 'Contact Us',
-                text: 'For more information',
-                onTap: () {
-                  navigateTo(context, const ContactUsScreen());
-                }),
+                ProfileFields(
+                    icon1: Icons.phone_in_talk,
+                    title: 'Wallet',
+                    text: 'Details of clouds and discount',
+                    onTap: () {
+                      navigateTo(context, const WalletScreen());
+                    }),
+                const SizedBox(
+                  height: 28,
+                ),
+                ProfileFields(
+                    icon1: Icons.phone_in_talk,
+                    title: 'Contact Us',
+                    text: 'For more information',
+                    onTap: () {
+                      navigateTo(context, const ContactUsScreen());
+                    }),
             const SizedBox(
               height: 28,
             ),
