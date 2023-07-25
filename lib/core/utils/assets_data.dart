@@ -14,7 +14,8 @@ class AssetsData{
   static const homeLocation = 'assets/images/home/home_location.png';
   static const location = 'assets/images/home/location.png';
   static const home_image = 'assets/images/home/home_image.png';
-  static const home_gridi_image = 'assets/images/home/home-gridi_image.png';
+  static const home_gridi_image = 'assets/images/home/home-gridi_image1.png';
+  static const home_gridi_image2 = 'assets/images/home/home-gridi_image2.png';
   static const home_grid_image_background = 'assets/images/home/home_grid_image_background.png';
   static const logoCompany = 'assets/images/history/logoCompany.png';
   static const historyimageintial = 'assets/images/history/historyimageintial.png';

@@ -3,7 +3,7 @@ import 'package:labor/features/history/presentation/views/widgets/history_list_v
 import 'package:labor/features/history/presentation/views/widgets/select_between_screen.dart';
 
 class HistoryBody2 extends StatelessWidget {
-  const HistoryBody2({Key? key}) : super(key: key);
+  const HistoryBody2({Key? key}) : super( key: key,);
 
   @override
   Widget build(BuildContext context) {
